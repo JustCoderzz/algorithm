@@ -34,4 +34,24 @@ public class _007 {
         }
         return res;
     }
+//    public void test(int nums[],int x,int y) {
+//
+//        int i=-1;
+//        int j=0;
+//        int flag=0;
+//        while (j<nums.length) {
+//            if (nums[j]>x&&nums[j]<y) {
+//                if (flag==0) {
+//                    i = j;
+//                    flag=1;
+//                }
+//                j++;
+//            }else if (i!=-1){
+//                flag=0;
+//                nums[i]=nums[j];
+//                i++;
+//                j++;
+//            }
+//        }
+//    }
 }
