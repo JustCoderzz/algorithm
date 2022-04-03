@@ -9,7 +9,7 @@ import java.util.List;
 public class _3_27_4 {
 
     public int maxValueOfCoins(List<List<Integer>> piles, int k) {
-
+        return 0;
     }
 
 
