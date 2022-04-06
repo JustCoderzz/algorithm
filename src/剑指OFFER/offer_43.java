@@ -6,16 +6,27 @@ package ½£Ö¸OFFER;
  **/
 public class offer_43 {
 
+//    cur>1   (a+1)*base
+//    cur=1   a*base+1*(b+1)
+//    cur<1   a*base
 
     public int countDigitOne(int n) {
-
-
-
-
-
-
-
-
+        long base=1;
+        int res=0;
+        while (base<=n) {
+            long a=n/base/10;
+            long b=n%base;
+            long cur=(n/base)%10;
+            if (cur>1) {
+                res+=(a+1)*base;
+            }else if (cur<1) {
+                res+=a*base;
+            }else {
+                res+=a*base+b+1;
+            }
+            base*=10;
+        }
+        return  res;
     }
 
 
