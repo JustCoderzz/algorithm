@@ -19,7 +19,6 @@ public class _440 {
             }
         }
         return (int) cur;
-
     }
     public int getCount(long cur,int n) {
         long next=cur+1;
