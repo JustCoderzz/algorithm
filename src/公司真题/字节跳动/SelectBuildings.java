@@ -7,34 +7,20 @@ package 公司真题.字节跳动;
 public class SelectBuildings {
 
 
-    int sum=0;
-    int start;
+
     public int solution(int nums[],int distance) {
 //        nums中选择3个位置 需要满足两者之间的距离小于distance
-        backTrace(nums,0,3,distance);
-        return  sum;
-    }
-
-    /**
-     *
-     * @param nums
-     * @param index
-     * @param k
-     * @param distance  最大距离
-     */
-    public void backTrace(int []nums,int index,int k,int distance) {
-        if (index>=nums.length) return;
-        if (k==0) {
-            int l=nums[index]-nums[start];
-            if (l<=distance) sum++;
-            return;
-        }
-        for (int i=index;i<nums.length-k+1;i++) {
-            if (k==3){
-                start=i;
+        long sum=0;
+        for (int i = 0,j=i+2; i < nums.length - 2; i++) {
+            long gap=0;
+            while (j<nums.length&&(nums[j]-nums[i])<=distance){
+                j++;
             }
-            backTrace(nums,i+1,k-1,distance);
+            gap=j-i-1;
+            sum=(sum+(gap*(gap-1))/2)%99997867;
         }
-
+        return (int) sum;
     }
+
+
 }
