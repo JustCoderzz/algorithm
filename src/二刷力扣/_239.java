@@ -21,11 +21,9 @@ public class _239 {
         }
         res[0]=deque.peek();
         for (int i = k; i < n - k + 1; i++) {
-
             while (!deque.isEmpty()&&nums[i]>=nums[deque.peekLast()]) {
                 deque.pollLast();
             }
-
         }
     }
 }
